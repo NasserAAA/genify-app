@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Customer Product Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1>Customer Product Prediction</h1>
+    <form action="/predict" method="POST">
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required><br>
+
+      <label for="antiguedad">Seniority:</label>
+      <input type="number" id="antiguedad" name="antiguedad" required><br>
+
+      <label for="segmento">Segmentation:</label>
+      <select id="segmento" name="segmento" required>
+        <option value="">--Select Option--</option>
+        <option value="01 - TOP">VIP</option>
+        <option value="02 - PARTICULARES">Individuals</option>
+        <option value="03 - UNIVERSITARIO">College Graduated</option>
+      </select><br>
+
+      <label for="sexo">Gender:</label>
+      <select id="sexo" name="sexo" required>
+        <option value="">Please select</option>
+        <option value="V">Male</option>
+        <option value="H">Female</option>
+      </select><br>
+
+      <label for="tiprel_1mes">Customer Relation:</label>
+      <select id="tiprel_1mes" name="tiprel_1mes" required>
+        <option value="">Please select</option>
+        <option value="A">Active</option>
+        <option value="I">Inactive</option>
+        <option value="P">Former customer</option>
+        <option value="R">Potential</option>
+      </select><br>
+
+      <label for="renta">Gross Income:</label>
+      <input type="number" id="renta" name="renta" required><br>
+
+      <label for="ind_actividad_cliente">Activity:</label>
+      <select id="ind_actividad_cliente" name="ind_actividad_cliente" required>
+        <option value="">Please select</option>
+        <option value="0">Inactive</option>
+        <option value="1">Active</option>
+      </select><br>
+
+      <label for="pais_residencia">Country Residence:</label>
+      <select id="pais_residencia" name="pais_residencia" required>
+        <option value="">Please select</option>
+        <option value="ES">Spain</option>
+        <option value="FR">France</option>
+        <option value="GB">United Kingdom</option>
+      </select><br>
+
+      <label for="canal_entrada">Channel:</label>
+      <input type="text" id="canal_entrada" name="canal_entrada" required><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
